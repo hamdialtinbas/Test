@@ -24,8 +24,7 @@ public class Person implements Serializable {
     private String name;
 
     @OneToOne
-    @JoinColumn(unique = true,nullable = false)
-    @Cascade(value = org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinColumn(unique = true,nullable = false,updatable = true,insertable = false)
     private Adress adress;
 
     public Long getId() {
