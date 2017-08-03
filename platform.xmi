@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_7qJxsHJGEee7kvvWQqAMcQ" name="platform">
+  <eAnnotations xmi:id="_7qJxsXJGEee7kvvWQqAMcQ" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_7qJxsnJGEee7kvvWQqAMcQ" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_7qJxs3JGEee7kvvWQqAMcQ" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7qJxtHJGEee7kvvWQqAMcQ" name="Platform">
+    <ownedAttribute xmi:id="_7qJxtXJGEee7kvvWQqAMcQ" name="platformTerminal" visibility="public" type="_7qJxw3JGEee7kvvWQqAMcQ" association="_7qJxuXJGEee7kvvWQqAMcQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7qJxtnJGEee7kvvWQqAMcQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7qJxt3JGEee7kvvWQqAMcQ" name="Name" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7qJxuHJGEee7kvvWQqAMcQ" name="Dosya" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7qJxuXJGEee7kvvWQqAMcQ" memberEnd="_7qJxtXJGEee7kvvWQqAMcQ _7qJxunJGEee7kvvWQqAMcQ">
+    <ownedEnd xmi:id="_7qJxunJGEee7kvvWQqAMcQ" visibility="public" type="_7qJxtHJGEee7kvvWQqAMcQ" association="_7qJxuXJGEee7kvvWQqAMcQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7qJxu3JGEee7kvvWQqAMcQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7qJxvHJGEee7kvvWQqAMcQ" name="Terminal">
+    <ownedAttribute xmi:id="_7qJxvXJGEee7kvvWQqAMcQ" name="platformTerminal" visibility="public" type="_7qJxw3JGEee7kvvWQqAMcQ" association="_7qJxwHJGEee7kvvWQqAMcQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7qJxvnJGEee7kvvWQqAMcQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7qJxv3JGEee7kvvWQqAMcQ" name="Name" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7qJxwHJGEee7kvvWQqAMcQ" memberEnd="_7qJxvXJGEee7kvvWQqAMcQ _7qJxwXJGEee7kvvWQqAMcQ">
+    <ownedEnd xmi:id="_7qJxwXJGEee7kvvWQqAMcQ" visibility="public" type="_7qJxvHJGEee7kvvWQqAMcQ" association="_7qJxwHJGEee7kvvWQqAMcQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7qJxwnJGEee7kvvWQqAMcQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7qJxw3JGEee7kvvWQqAMcQ" name="PlatformTerminal"/>
+</uml:Model>

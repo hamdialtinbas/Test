@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "person",
+            "otherEntityName": "person",
+            "relationshipType": "one-to-one",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "adress"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170803192939",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "adress",
+    "pagination": "no",
+    "microserviceName": "PlatformK",
+    "searchEngine": false
+}

@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "driver",
+            "otherEntityName": "driver",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "car"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170803190300",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "car",
+    "pagination": "no",
+    "microserviceName": "PlatformK",
+    "searchEngine": false
+}
