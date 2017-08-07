@@ -20,6 +20,7 @@ import java.util.Optional;
 /**
  * REST controller for managing Car.
  */
+@CrossOrigin(value = "*")
 @RestController
 @RequestMapping("/api")
 public class CarResource {

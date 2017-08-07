@@ -12,9 +12,12 @@
     <include file="config/liquibase/changelog/20170803190300_added_entity_Car.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170803192844_added_entity_Person.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170803192939_added_entity_Adress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170806200517_added_entity_Catagory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170806200652_added_entity_Bookk.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20170726201152_added_entity_constraints_PlatformTerminal.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170803190300_added_entity_constraints_Car.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170803192844_added_entity_constraints_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170806200652_added_entity_constraints_Bookk.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

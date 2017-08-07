@@ -20,6 +20,7 @@ import java.util.Optional;
 /**
  * REST controller for managing Driver.
  */
+@CrossOrigin(value = "*")
 @RestController
 @RequestMapping("/api")
 public class DriverResource {

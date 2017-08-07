@@ -22,6 +22,7 @@ import java.util.stream.StreamSupport;
 /**
  * REST controller for managing Adress.
  */
+@CrossOrigin(value = "*")
 @RestController
 @RequestMapping("/api")
 public class AdressResource {

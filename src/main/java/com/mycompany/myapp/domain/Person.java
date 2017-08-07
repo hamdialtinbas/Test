@@ -24,7 +24,7 @@ public class Person implements Serializable {
     private String name;
 
     @OneToOne
-    @JoinColumn(unique = true,nullable = false,updatable = true,insertable = false)
+    @JoinColumn(unique = true,nullable = false)
     private Adress adress;
 
     public Long getId() {
