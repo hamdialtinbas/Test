@@ -2,9 +2,12 @@ package com.mycompany.myapp.domain;
 
 
 import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -23,9 +26,16 @@ public class Person implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @OneToOne
-    @JoinColumn(unique = true,nullable = false)
-    private Adress adress;
+    public List<Adress> getAdress() {
+        return adress;
+    }
+
+    public void setAdress(List<Adress> adress) {
+        this.adress = adress;
+    }
+
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="person",fetch = FetchType.EAGER)
+    private List<Adress> adress;
 
     public Long getId() {
         return id;
@@ -48,18 +58,7 @@ public class Person implements Serializable {
         this.name = name;
     }
 
-    public Adress getAdress() {
-        return adress;
-    }
 
-    public Person adress(Adress adress) {
-        this.adress = adress;
-        return this;
-    }
-
-    public void setAdress(Adress adress) {
-        this.adress = adress;
-    }
 
     @Override
     public boolean equals(Object o) {

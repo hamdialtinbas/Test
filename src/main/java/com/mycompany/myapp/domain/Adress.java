@@ -1,9 +1,11 @@
 package com.mycompany.myapp.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -22,8 +24,8 @@ public class Adress implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @OneToOne(mappedBy = "adress")
-    @JsonIgnore
+    @JoinColumn(name="person_id", nullable=false)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Person person;
 
     public Long getId() {
