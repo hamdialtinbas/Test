@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "kole",
+            "otherEntityName": "kole",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "efendi"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ack",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170810194913",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "efendi",
+    "pagination": "no",
+    "microserviceName": "PlatformK",
+    "searchEngine": false
+}

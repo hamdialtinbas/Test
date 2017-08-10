@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "catagory",
+            "otherEntityName": "catagory",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripstion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170806200652",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "bookk",
+    "pagination": "no",
+    "microserviceName": "PlatformK",
+    "searchEngine": false
+}

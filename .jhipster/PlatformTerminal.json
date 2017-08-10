@@ -1,0 +1,23 @@
+{
+  "fluentMethods": true,
+  "relationships": [
+    {
+      "relationshipName": "platform",
+      "otherEntityName": "platform",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipName": "terminal",
+      "otherEntityName": "terminal",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [],
+  "changelogDate": "20170726201152",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "platform_terminal"
+}

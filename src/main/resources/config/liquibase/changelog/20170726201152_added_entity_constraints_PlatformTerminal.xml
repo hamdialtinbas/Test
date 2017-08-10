@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PlatformTerminal.
+    -->
+    <changeSet id="20170726201152-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="platform_id"
+                                 baseTableName="platform_terminal"
+                                 constraintName="fk_platform_terminal_platform_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="platform"/>
+
+        <addForeignKeyConstraint baseColumnNames="terminal_id"
+                                 baseTableName="platform_terminal"
+                                 constraintName="fk_platform_terminal_terminal_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="terminal"/>
+
+    </changeSet>
+</databaseChangeLog>
