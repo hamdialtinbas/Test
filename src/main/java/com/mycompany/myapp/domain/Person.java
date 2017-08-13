@@ -1,13 +1,11 @@
 package com.mycompany.myapp.domain;
 
-
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -26,16 +24,20 @@ public class Person implements Serializable {
     @Column(name = "name")
     private String name;
 
-    public List<Adress> getAdress() {
-        return adress;
-    }
+    @Column(name = "first_name")
+    private String firstName;
 
-    public void setAdress(List<Adress> adress) {
-        this.adress = adress;
-    }
+    @Column(name = "last_name")
+    private String lastName;
 
-    @OneToMany(cascade=CascadeType.ALL, mappedBy="person",fetch = FetchType.EAGER)
-    private List<Adress> adress;
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "age")
+    private Integer age;
+
+    @OneToMany(mappedBy = "person",fetch = FetchType.EAGER)
+    private Set<Adress> adresses = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -58,7 +60,82 @@ public class Person implements Serializable {
         this.name = name;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
 
+    public Person firstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public Person lastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Person email(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public Person age(Integer age) {
+        this.age = age;
+        return this;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Set<Adress> getAdresses() {
+        return adresses;
+    }
+
+    public Person adresses(Set<Adress> adresses) {
+        this.adresses = adresses;
+        return this;
+    }
+
+    public Person addAdress(Adress adress) {
+        this.adresses.add(adress);
+        adress.setPerson(this);
+        return this;
+    }
+
+    public Person removeAdress(Adress adress) {
+        this.adresses.remove(adress);
+        adress.setPerson(null);
+        return this;
+    }
+
+    public void setAdresses(Set<Adress> adresses) {
+        this.adresses = adresses;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -85,6 +162,10 @@ public class Person implements Serializable {
         return "Person{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
+            ", firstName='" + getFirstName() + "'" +
+            ", lastName='" + getLastName() + "'" +
+            ", email='" + getEmail() + "'" +
+            ", age='" + getAge() + "'" +
             "}";
     }
 }

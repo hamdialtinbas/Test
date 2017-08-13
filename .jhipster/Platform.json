@@ -1,26 +1,28 @@
 {
-  "fluentMethods": true,
-  "relationships": [
-    {
-      "relationshipType": "one-to-many",
-      "relationshipName": "platformTerminal",
-      "otherEntityName": "platformTerminal",
-      "otherEntityRelationshipName": "platform"
-    }
-  ],
-  "fields": [
-    {
-      "fieldName": "name",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "dosya",
-      "fieldType": "String"
-    }
-  ],
-  "changelogDate": "20170726201150",
-  "dto": "no",
-  "pagination": "no",
-  "service": "no",
-  "entityTableName": "platform"
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "platformTerminal",
+            "otherEntityName": "platformTerminal",
+            "otherEntityRelationshipName": "platform"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dosya",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170726201150",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "platform",
+    "pagination": "no",
+    "microserviceName": "PlatformK",
+    "searchEngine": false
 }

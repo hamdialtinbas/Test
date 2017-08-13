@@ -88,11 +88,11 @@ public class EfendiServiceImpl implements EfendiService{
     }
     public List<Efendi> findEfendi(String name) {
 
-            em.
+
         //Query query = em.createQuery("from Efendi as p where p.name=?");
 
-        return query.getResultList();
-
+       // return query.getResultList();
+return null;
 
     }
 

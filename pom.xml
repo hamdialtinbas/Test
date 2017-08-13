@@ -16,6 +16,7 @@
     <name>Platform K</name>
 
     <properties>
+        <rsql.version>2.1.0</rsql.version>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
         <assertj.version>3.6.2</assertj.version>
         <awaitility.version>2.0.0</awaitility.version>
@@ -103,6 +104,27 @@
     </dependencyManagement>
 
     <dependencies>
+
+
+        <!-- Querydsl -->
+
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-apt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+        </dependency>
+
+        <!-- Rsql -->
+
+        <dependency>
+            <groupId>cz.jirutka.rsql</groupId>
+            <artifactId>rsql-parser</artifactId>
+            <version>${rsql.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>io.github.jhipster</groupId>
             <artifactId>jhipster</artifactId>

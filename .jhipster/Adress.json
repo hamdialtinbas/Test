@@ -4,15 +4,34 @@
         {
             "relationshipName": "person",
             "otherEntityName": "person",
-            "relationshipType": "one-to-one",
-            "ownerSide": false,
-            "otherEntityRelationshipName": "adress"
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
         }
     ],
     "fields": [
         {
             "fieldName": "name",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "l11",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "l16",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "l22",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "l11b",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "l1",
+            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20170803192939",

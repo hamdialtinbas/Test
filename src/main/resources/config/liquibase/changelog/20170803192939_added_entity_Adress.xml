@@ -26,6 +26,30 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="l_11" type="bit">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="l_16" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="l_22" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="l_11_b" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="l_1" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="person_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
         

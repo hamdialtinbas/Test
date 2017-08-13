@@ -1,11 +1,10 @@
 package com.mycompany.myapp.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -24,7 +23,22 @@ public class Adress implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @JoinColumn(name="person_id", nullable=false)
+    @Column(name = "l_11")
+    private Boolean l11;
+
+    @Column(name = "l_16")
+    private Integer l16;
+
+    @Column(name = "l_22")
+    private Integer l22;
+
+    @Column(name = "l_11_b")
+    private Integer l11b;
+
+    @Column(name = "l_1")
+    private Integer l1;
+
+    @ManyToOne
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Person person;
 
@@ -47,6 +61,71 @@ public class Adress implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean isl11() {
+        return l11;
+    }
+
+    public Adress l11(Boolean l11) {
+        this.l11 = l11;
+        return this;
+    }
+
+    public void setl11(Boolean l11) {
+        this.l11 = l11;
+    }
+
+    public Integer getl16() {
+        return l16;
+    }
+
+    public Adress l16(Integer l16) {
+        this.l16 = l16;
+        return this;
+    }
+
+    public void setl16(Integer l16) {
+        this.l16 = l16;
+    }
+
+    public Integer getl22() {
+        return l22;
+    }
+
+    public Adress l22(Integer l22) {
+        this.l22 = l22;
+        return this;
+    }
+
+    public void setl22(Integer l22) {
+        this.l22 = l22;
+    }
+
+    public Integer getl11b() {
+        return l11b;
+    }
+
+    public Adress l11b(Integer l11b) {
+        this.l11b = l11b;
+        return this;
+    }
+
+    public void setl11b(Integer l11b) {
+        this.l11b = l11b;
+    }
+
+    public Integer getl1() {
+        return l1;
+    }
+
+    public Adress l1(Integer l1) {
+        this.l1 = l1;
+        return this;
+    }
+
+    public void setl1(Integer l1) {
+        this.l1 = l1;
     }
 
     public Person getPerson() {
@@ -87,6 +166,11 @@ public class Adress implements Serializable {
         return "Adress{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
+            ", l11='" + isl11() + "'" +
+            ", l16='" + getl16() + "'" +
+            ", l22='" + getl22() + "'" +
+            ", l11b='" + getl11b() + "'" +
+            ", l1='" + getl1() + "'" +
             "}";
     }
 }
