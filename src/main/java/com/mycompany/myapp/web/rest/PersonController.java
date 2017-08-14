@@ -2,6 +2,7 @@ package com.mycompany.myapp.web.rest;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
+import com.mycompany.myapp.config.LinkType;
 import com.mycompany.myapp.domain.Person;
 import com.mycompany.myapp.repository.IPersonDAO;
 import com.mycompany.myapp.repository.PersonDataRepository;
@@ -38,6 +39,9 @@ public class PersonController {
     @RequestMapping(method = RequestMethod.GET, value = "/people")
     @ResponseBody
     public List<Person> findAll(@RequestParam(value = "search", required = false) String search) {
+
+
+
         List<SearchCriteria> params = new ArrayList<SearchCriteria>();
         if (search != null) {
             Pattern pattern = Pattern.compile("(\\w+?)(:|<|>)(\\w+?),");

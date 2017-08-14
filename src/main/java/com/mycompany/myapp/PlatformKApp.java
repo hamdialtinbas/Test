@@ -3,6 +3,7 @@ package com.mycompany.myapp;
 import com.mycompany.myapp.config.ApplicationProperties;
 import com.mycompany.myapp.config.DefaultProfileUtil;
 
+import com.mycompany.myapp.config.LinkType;
 import io.github.jhipster.config.JHipsterConstants;
 
 import org.slf4j.Logger;
@@ -80,5 +81,6 @@ public class PlatformKApp {
             InetAddress.getLocalHost().getHostAddress(),
             env.getProperty("server.port"),
             env.getActiveProfiles());
+        System.out.println(LinkType.LINK1.value());
     }
 }
